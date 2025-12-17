@@ -1,1 +1,39 @@
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files
 .vs/
+*.user
+*.suo
+
+# Ignore build output
+bin/
+obj/
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+
+# Ignore Rider IDE files
+.idea/
+
+# Ignore Mac system files
+.DS_Store
+
+# Ignore Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignore logs
+*.log
+
+# Ignore test results
+TestResults/
+
+# Ignore publish output
+publish/
+
+# Ignore user secrets
+secrets.json
+
+# Ignore local settings for Azure Functions
+local.settings.json
