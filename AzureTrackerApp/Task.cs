@@ -19,4 +19,14 @@ namespace AzureTrackerApp
         public string Name { get; set; } = string.Empty;
         public DateTime? DueDate { get; set; }
     }
+
+    public class TaskUpdate
+    {
+        public string PartitionKey { get; set; } = "TaskPartition";
+
+        public string RowKey { get; set; } = string.Empty;
+        public string? Name { get; set; } = string.Empty;
+        public TaskStatus? Status { get; set; }
+        public DateTime? DueDate { get; set; }
+    }
 }
