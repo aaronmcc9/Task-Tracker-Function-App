@@ -3,7 +3,7 @@ using Azure.Data.Tables;
 
 namespace AzureTrackerApp
 {
-    public class Task : ITableEntity
+    public class TaskEntity : ITableEntity
     {
         public string PartitionKey { get; set; } = "TaskPartition";
         public string RowKey { get; set; } = string.Empty; // TaskId
@@ -14,7 +14,7 @@ namespace AzureTrackerApp
         public ETag ETag { get; set; }
     }
 
-    public class TaskRequest
+    public class TaskCreate
     {
         public string Name { get; set; } = string.Empty;
         public DateTime? DueDate { get; set; }
@@ -22,9 +22,6 @@ namespace AzureTrackerApp
 
     public class TaskUpdate
     {
-        public string PartitionKey { get; set; } = "TaskPartition";
-
-        public string RowKey { get; set; } = string.Empty;
         public string? Name { get; set; } = string.Empty;
         public TaskStatus? Status { get; set; }
         public DateTime? DueDate { get; set; }
